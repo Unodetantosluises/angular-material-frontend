@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
 export type MenuItem = {
   icon: string;
   label: string;
-  route: string;
+  route?: string;
 }
 
 @Component({
@@ -21,6 +21,7 @@ export type MenuItem = {
 export class CustomSidenavComponent {
 
   sideNavCollapsed = signal(false);
+
   @Input() set collapsed(val: boolean) {
     this.sideNavCollapsed.set(val);
   }
@@ -51,7 +52,7 @@ export class CustomSidenavComponent {
       label: 'Pacientes',
       route: 'patients'
     },
-        {
+    {
       icon: 'medical_services',
       label: 'Operaciones',
       route: 'operations'

@@ -5,12 +5,17 @@ import { DoctorsComponent } from './pages/doctors/doctors.component';
 import { PatientComponent } from './pages/patient/patient.component';
 import { OperationsComponent } from './pages/operations/operations.component';
 import { ResourcesComponent } from './pages/resources/resources.component';
+import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'account'
+    redirectTo: 'home'
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
   {
     path: 'account',
