@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OperationsComponent } from './operations.component';
+import { BackLayoutComponent } from './back-layout.component';
 
-describe('OperationsComponent', () => {
-  let component: OperationsComponent;
-  let fixture: ComponentFixture<OperationsComponent>;
+describe('BackLayoutComponent', () => {
+  let component: BackLayoutComponent;
+  let fixture: ComponentFixture<BackLayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OperationsComponent]
+      imports: [BackLayoutComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OperationsComponent);
+    fixture = TestBed.createComponent(BackLayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

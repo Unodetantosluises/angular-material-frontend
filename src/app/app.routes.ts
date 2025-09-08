@@ -1,44 +1,45 @@
 import { Routes } from '@angular/router';
-import { AccountComponent } from './pages/account/account.component';
-import { AppointmentsComponent } from './pages/appointments/appointments.component';
-import { DoctorsComponent } from './pages/doctors/doctors.component';
-import { PatientComponent } from './pages/patient/patient.component';
-import { OperationsComponent } from './pages/operations/operations.component';
-import { ResourcesComponent } from './pages/resources/resources.component';
+import { FrontLayoutComponent } from './layouts/front-layout/front-layout.component';
+import { BackLayoutComponent } from './layouts/back-layout/back-layout.component';
 import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
+    component: FrontLayoutComponent,
+    children: [
+      {
+        path: '',
+        title: 'Home',
+        component: HomeComponent
+      }
+    ]
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'back',
+    component: BackLayoutComponent,
+    // canActivate: [AuthGuardService],
+    children: [
+      {
+        path:'dashboard',
+        title: 'Dashboard',
+        loadComponent:() => import('./pages/dashboard/dashboard.component').then(c=> c.DashboardComponent)
+      },
+      {
+        path: 'doctors',
+        title: 'Doctors',
+        loadComponent: () => import('./pages/doctors/doctors.component').then(c => c.DoctorsComponent)
+      },
+      {
+        path: 'account',
+        title: 'Account',
+        loadComponent: () => import('./pages/account/account.component').then(c => c.AccountComponent)
+      }
+    ]
   },
   {
-    path: 'account',
-    component: AccountComponent,
-  },
-  {
-    path: 'appointments',
-    component: AppointmentsComponent
-  },
-  {
-    path: 'doctors',
-    component: DoctorsComponent
-  },
-  {
-    path: 'patients',
-    component: PatientComponent
-  },
-  {
-    path: 'operations',
-    component: OperationsComponent
-  },
-  {
-    path: 'resources',
-    component: ResourcesComponent
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];

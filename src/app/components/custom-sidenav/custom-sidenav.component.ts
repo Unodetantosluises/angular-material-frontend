@@ -28,9 +28,9 @@ export class CustomSidenavComponent {
 
   menuItems = signal<MenuItem[]>([
     {
-      icon: 'home',
-      label: 'Home',
-      route: 'home'
+      icon: 'dashboard',
+      label: 'Dashboard',
+      route: 'dashboard'
     },
     {
       icon: 'account_circle',
@@ -38,30 +38,10 @@ export class CustomSidenavComponent {
       route: 'account'
     },
     {
-      icon: 'calendar_month',
-      label: 'Calendario de Citas',
-      route: 'appointments'
-    },
-    {
-      icon: 'assignment_ind',
+      icon: 'dashboard',
       label: 'Doctores',
       route: 'doctors'
-    },
-    {
-      icon: 'person_book',
-      label: 'Pacientes',
-      route: 'patients'
-    },
-    {
-      icon: 'medical_services',
-      label: 'Operaciones',
-      route: 'operations'
-    },
-    {
-      icon: 'vaccines',
-      label: 'Recursos',
-      route: 'resources'
-    },
+    }
   ]);
 
   profilePictureSize = computed(() => this.sideNavCollapsed() ? '32' : '100');
