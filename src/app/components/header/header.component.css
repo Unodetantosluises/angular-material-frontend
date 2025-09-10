@@ -1,0 +1,73 @@
+.refaccionaria-header {
+  background-color: #fff; /* Fondo blanco para el header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera en la parte inferior */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centra el contenido del header */
+  align-items: center;
+  height: 64px; /* Altura fija para el header */
+  position: sticky; /* Para que se mantenga visible al hacer scroll */
+  top: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Espacia el logo y la navegación */
+  align-items: center;
+  max-width: 1200px; /* Ancho máximo del contenido para centrarlo */
+  width: 100%;
+}
+
+.logo a {
+  font-family: 'Roboto', sans-serif; /* Puedes elegir una fuente similar */
+  font-size: 24px;
+  font-weight: 700; /* Negrita */
+  color: #3f51b5; /* Un tono de azul de Material Design */
+  text-decoration: none; /* Quita el subrayado predeterminado del enlace */
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Espacio entre los elementos de navegación */
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #555; /* Color de texto gris oscuro */
+  font-size: 16px;
+  font-weight: 500; /* Grosor de fuente medio */
+  padding: 8px 12px; /* Espaciado para los enlaces */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.navigation a:hover {
+  color: #3f51b5; /* Cambia de color al pasar el ratón */
+}
+
+/* Estilo para el enlace activo */
+.navigation a.active {
+  color: #3f51b5;
+  border-bottom: 2px solid #3f51b5; /* Subrayado para el enlace activo */
+}
+
+.navigation .contact-button {
+  background-color: #3f51b5; /* Fondo azul para el botón de contacto */
+  color: #fff; /* Texto blanco */
+  border-radius: 4px; /* Bordes ligeramente redondeados */
+  padding: 10px 20px; /* Más padding para que parezca un botón */
+  transition: background-color 0.3s ease;
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.navigation .contact-button:hover {
+  background-color: #303f9f; /* Un azul un poco más oscuro al pasar el ratón */
+}
+
+/* Estilo para el botón de contacto activo */
+.navigation .contact-button.active {
+  background-color: #303f9f; /* Mantener color oscuro cuando está activo */
+  border-bottom: none; /* Quitar el subrayado para que no interfiera con el estilo de botón */
+}
