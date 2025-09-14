@@ -1,0 +1,78 @@
+/* --- Estilos para la Sección de Ubicación --- */
+.location-section {
+  padding: 60px 20px;
+  background-color: #f0f2f5; /* Fondo gris muy claro */
+}
+
+.location-content {
+  max-width: 1200px;
+  margin: auto;
+  background-color: #fff; /* Contenedor interior blanco */
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  display: grid;
+  /* Crea 2 columnas: la primera ocupa 2 partes, la segunda 1 parte */
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden; /* Asegura que el iframe respete el borde redondeado */
+  min-height: 550px; /* Altura mínima para el mapa */
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio entre cada item de contacto */
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555;
+  background-color: #f0f2f5;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  align-self: flex-start; /* Hace que el contenedor se ajuste al texto */
+}
+
+.contact-label mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-info {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+/* --- Estilos para pantallas pequeñas (Responsividad) --- */
+@media (max-width: 992px) {
+  .location-content {
+    /* Cambia a 1 columna */
+    grid-template-columns: 1fr;
+  }
+}

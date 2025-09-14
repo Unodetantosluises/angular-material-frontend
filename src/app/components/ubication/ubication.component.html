@@ -1,0 +1,41 @@
+<section class="location-section">
+  <div class="location-content">
+    <div class="location-content">
+      <iframe *ngIf="googleMapsUrl"
+      [src]="googleMapsUrl"
+      width="700px"
+      height="450px"
+      style="border: 0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-label"><mat-icon>location_on</mat-icon> <span>Ubicación</span></div>
+        <p class="contact-info">{{ contactInfo.address }}</p>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label"><mat-icon>phone</mat-icon> <span>Teléfono</span></div>
+        <p class="contact-info">{{ contactInfo.phone }}</p>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label"><mat-icon>email</mat-icon> <span>Correo Electrónico</span></div>
+        <p class="contact-info">{{ contactInfo.email }}</p>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-label"><mat-icon>schedule</mat-icon> <span>Horarios de Atención</span></div>
+        <div class="hours-grid">
+          <p class="contact-info">{{ contactInfo.days }}</p>
+          <p class="contact-info">{{ contactInfo.hours }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

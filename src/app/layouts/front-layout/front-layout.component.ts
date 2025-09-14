@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
-import { HeroComponent } from '../../components/hero/hero.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CarouselComponent, CarouselItem } from "../../components/carousel/carousel.component";
-import { CatalogeComponent, Product } from '../../components/cataloge/cataloge.component';
+import { CatalogeComponent } from '../../components/cataloge/cataloge.component';
 import { MotorcyclePartsServiceComponent } from '../../components/motorcycle-parts-service/motorcycle-parts-service.component';
+import { UbicationComponent } from '../../components/ubication/ubication.component';
 
 @Component({
   selector: 'app-front-layout',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, CatalogeComponent, MotorcyclePartsServiceComponent, FooterComponent, CarouselComponent],
+  imports: [HeaderComponent, CatalogeComponent, MotorcyclePartsServiceComponent, UbicationComponent, FooterComponent, CarouselComponent],
   templateUrl: './front-layout.component.html',
   styleUrl: './front-layout.component.css'
 })
