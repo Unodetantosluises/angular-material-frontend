@@ -1,0 +1,22 @@
+<section class="services-section">
+
+  <h2><a routerLink="/servicios">Servicios para tu Motocicleta</a></h2>
+
+  <p class="subtitle">Contamos con diversidad de servicios mecánicos dentro de nuestro taller</p>
+
+  <div class="services-grid">
+    <div *ngFor="let service of services" class="service-card">
+
+      <div class="service-icon-container">
+        <mat-icon>{{ service.icon }}</mat-icon>
+      </div>
+
+      <div class="service-content">
+        <h4>{{ service.name }}</h4>
+        <p>{{ service.description }}</p>
+        <button mat-raised-button color="primary">Cotizar</button>
+      </div>
+
+    </div>
+  </div>
+</section>>

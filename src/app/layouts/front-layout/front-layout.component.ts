@@ -4,11 +4,12 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { CarouselComponent, CarouselItem } from "../../components/carousel/carousel.component";
 import { CatalogeComponent, Product } from '../../components/cataloge/cataloge.component';
+import { MotorcyclePartsServiceComponent } from '../../components/motorcycle-parts-service/motorcycle-parts-service.component';
 
 @Component({
   selector: 'app-front-layout',
   standalone: true,
-  imports: [HeaderComponent, HeroComponent, CatalogeComponent, FooterComponent, CarouselComponent],
+  imports: [HeaderComponent, HeroComponent, CatalogeComponent, MotorcyclePartsServiceComponent, FooterComponent, CarouselComponent],
   templateUrl: './front-layout.component.html',
   styleUrl: './front-layout.component.css'
 })
