@@ -1,0 +1,27 @@
+<div class="carousel-container" (mouseenter)="stopAutoPlay()" (mouseleave)="startAutoPlay()">
+  <div class="carousel-wrapper"
+  [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'"
+  [style.transform]="'transform ' + animationSpeed + 'ms ease-in-out'">
+
+    <div *ngFor="let slide of slides" class="carousel-slide">
+      <img [src]="slide.imageSrc" [alt]="slide.imageAlt">
+    </div>
+
+  </div>
+
+  <button mat-icon-button class="carousel-button prev" (click)="previousSlide()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+  <button mat-icon-button class="carousel-button next" (click)="nextSlide()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+
+  <div *ngIf="indicatorsVisible" class="carousel-indicators">
+    <button
+      *ngFor="let slide of slides; let i = index"
+      (click)="goToSlide(i)"
+      [class.active]="i === currentIndex()">
+    </button>
+  </div>
+
+</div>
