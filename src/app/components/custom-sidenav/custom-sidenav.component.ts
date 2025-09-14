@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, computed, Input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatTooltipModule, TooltipPosition } from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterModule } from '@angular/router';
 
 export type MenuItem = {
