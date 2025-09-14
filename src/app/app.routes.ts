@@ -10,7 +10,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        title: 'Home',
+        title: 'Neria Motos',
         component: HomeComponent
       }
     ]
@@ -34,6 +34,21 @@ export const routes: Routes = [
         path: 'account',
         title: 'Account',
         loadComponent: () => import('./pages/account/account.component').then(c => c.AccountComponent)
+      },
+      {
+        path: 'inventory',
+        title: 'Inventory',
+        loadComponent: () => import('./pages/inventory/inventory.component').then(c => c.InventoryComponent)
+      },
+      {
+        path: 'orders',
+        title: 'Orders',
+        loadComponent: () => import('./pages/orders/orders.component').then(c => c.OrdersComponent)
+      },
+      {
+        path: 'quotes',
+        title: 'Quotes',
+        loadComponent: () => import('./pages/quotes/quotes.component').then(c => c.QuotesComponent)
       }
     ]
   },

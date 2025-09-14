@@ -41,6 +41,21 @@ export class CustomSidenavComponent {
       icon: 'dashboard',
       label: 'Doctores',
       route: 'doctors'
+    },
+    {
+      icon: 'dashboard',
+      label: 'Inventario',
+      route: 'inventory'
+    },
+    {
+      icon: 'dashboard',
+      label: 'Ordenes',
+      route: 'orders'
+    },
+    {
+      icon: 'dashboard',
+      label: 'Cotizaciones',
+      route: 'quotes'
     }
   ]);
 
