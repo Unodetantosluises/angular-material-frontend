@@ -43,7 +43,7 @@
 }
 
 .navigation a:hover {
-  color: #3f51b5; /* Cambia de color al pasar el ratón */
+  color: #fff; /* Cambia de color al pasar el ratón */
 }
 
 /* Estilo para el enlace activo */
@@ -68,6 +68,6 @@
 
 /* Estilo para el botón de contacto activo */
 .navigation .contact-button.active {
-  background-color: #303f9f; /* Mantener color oscuro cuando está activo */
+  background-color: #fff; /* Mantener color oscuro cuando está activo */
   border-bottom: none; /* Quitar el subrayado para que no interfiera con el estilo de botón */
 }
