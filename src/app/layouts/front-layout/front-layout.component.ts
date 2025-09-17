@@ -1,31 +1,13 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { FooterComponent } from '../../components/footer/footer.component';
-import { CarouselComponent, CarouselItem } from "../../components/carousel/carousel.component";
-import { CatalogeComponent } from '../../components/cataloge/cataloge.component';
-import { MotorcyclePartsServiceComponent } from '../../components/motorcycle-parts-service/motorcycle-parts-service.component';
-import { UbicationComponent } from '../../components/ubication/ubication.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-front-layout',
   standalone: true,
-  imports: [HeaderComponent, CatalogeComponent, MotorcyclePartsServiceComponent, UbicationComponent, FooterComponent, CarouselComponent],
+  imports: [HeaderComponent, FooterComponent, RouterOutlet],
   templateUrl: './front-layout.component.html',
   styleUrl: './front-layout.component.css'
 })
-export class FrontLayoutComponent {
-  slides: CarouselItem[] = [
-    {
-      imageSrc: 'https://www.yamahamotos.cl/wp-content/uploads/2022/07/r1_negra.jpg',
-      imageAlt: 'Casco Hawk Cyclops modelo 1'
-    },
-    {
-      imageSrc: 'https://www.yamahamotos.cl/wp-content/uploads/2024/04/yz_2450fx_1.jpg',
-      imageAlt: 'Casco Hawk Cyclops modelo 2'
-    },
-    {
-      imageSrc: 'https://www.yamahamotos.cl/wp-content/uploads/2022/07/r1_azul.jpg',
-      imageAlt: 'Casco Hawk Cyclops modelo 3'
-    }
-  ];
-}
+export class FrontLayoutComponent {}

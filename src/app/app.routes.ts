@@ -8,10 +8,15 @@ export const routes: Routes = [
     path: '',
     component: FrontLayoutComponent,
     children: [
-      {
+       {
         path: '',
         title: 'Neria Motos',
         component: HomeComponent
+      },
+      {
+        path: 'catalogo',
+        title: 'Catalogo',
+        loadComponent: () => import('./pages/catalogo/catalogo.component').then(c => c.CatalogoComponent)
       }
     ]
   },
