@@ -43,7 +43,7 @@
 }
 
 .navigation a:hover {
-  color: #fff; /* Cambia de color al pasar el ratón */
+  color: #303f9f; /* Cambia de color al pasar el ratón */
 }
 
 /* Estilo para el enlace activo */
