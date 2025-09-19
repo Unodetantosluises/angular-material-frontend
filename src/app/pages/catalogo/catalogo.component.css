@@ -1,0 +1,135 @@
+.catalog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9; /* Un fondo gris claro para la sección */
+}
+
+.catalog-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.catalog-container h3 {
+  font-size: 2rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Redondear el campo de búsqueda como en el diseño */
+:host ::ng-deep .search-bar .mdc-notched-outline > * {
+  border-radius: 50px !important;
+}
+:host ::ng-deep .search-bar .mat-mdc-form-field-flex {
+  height: 56px;
+}
+:host ::ng-deep .search-bar .mat-mdc-text-field-wrapper {
+  border-radius: 50px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Espacio entre las tarjetas */
+  width: 100%;
+  max-width: 1200px;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 350px;
+  text-align: left;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.product-image-container {
+  position: relative;
+  /* 1. Define un alto fijo para el contenedor */
+  height: 400px;
+  /* 2. Oculta cualquier parte de la imagen que se desborde */
+  overflow: hidden;
+  background-color: #ffffff; /* Un fondo por si la imagen no carga */
+}
+
+.product-image-container img {
+  width: 100%;
+  height: 100%;
+  /* 3. La propiedad clave: controla cómo se ajusta la imagen */
+  object-fit: cover;
+}
+
+.product-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.brand {
+  font-size: 0.9rem;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3f51b5; /* Azul primario de Material */
+}
+
+.product-name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  min-height: 48px; /* Para alinear tarjetas con nombres de 1 o 2 líneas */
+}
+
+.add-to-cart-button {
+  width: 100%;
+  height: 48px;
+  font-size: 1rem;
+}
+
+.view-all-button {
+  margin-top: 40px;
+  padding: 12px 30px;
+  font-size: 1rem;
+}
+
+/* Nuevo estilo para el paginador */
+.paginator {
+  margin-top: 40px;
+  background-color: transparent; /* O el color de fondo de tu sección */
+}

@@ -45,5 +45,4 @@ export class CatalogeComponent {
       name: 'Aceite Sintético 7100',
     }
   ];
-
 }

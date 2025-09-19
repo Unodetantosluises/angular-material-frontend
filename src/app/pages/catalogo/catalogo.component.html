@@ -1,1 +1,45 @@
-<h1>Catalogo Works!</h1>
+<section class="catalog-container">
+
+  <h2>Todo lo que necesitas para tu Motocicleta</h2>
+
+  <mat-form-field class="seacrh-bar" appearance="outline">
+    <input matInput type="text" placeholder="Busca cascos, llantas, refacciones..." />
+    <button matSuffix mat-icon-button aria-label="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <h3>Nuestro Catalogo de Refacciones</h3>
+
+  <div class="product-grid">
+    <mat-card *ngFor="let product of products" class="product-card">
+      <div class="product-image-container">
+        <!-- <div class="producto-category">{{ product.category }}</div> -->
+        <img mat-card-image [src]="product.imageUrl" [alt]="product.name">
+      </div>
+
+      <mat-card-content class="product-info">
+        <div class="product-details">
+          <span class="brand">{{product.brand}}</span>
+          <span class="price">{{product.price | currency: 'MXM':'symbol-narrow'}}</span>
+        </div>
+        <p class="product-name">{{product.name}}</p>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" class="add-to-cart-button">Agregar al Carrito</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+   <mat-paginator
+      class="paginator"
+      [length]="allProducts.length"
+      [pageSize]="pageSize"
+      [pageSizeOptions]="[9, 18, 27]"
+      [pageIndex]="pageIndex"
+      (page)="handlePageEvent($event)"
+      aria-label="Seleccionar página de productos">
+  </mat-paginator>
+
+</section>
