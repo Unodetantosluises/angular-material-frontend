@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 export interface Product {
   category: string;
@@ -17,7 +18,7 @@ export interface Product {
 @Component({
   selector: 'app-cataloge',
   standalone: true,
-  imports: [CommonModule, MatInputModule, MatCardModule, MatFormFieldModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, MatInputModule, MatCardModule, MatFormFieldModule, MatButtonModule, MatIconModule, RouterLink],
   templateUrl: './cataloge.component.html',
   styleUrl: './cataloge.component.css'
 })
